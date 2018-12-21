@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "OpenID Connection with Google",
+    "description": "OpenID Connection Test",
+    "version": "1.0",
+    "browser_action": {
+    "default_icon": "eye-mask.png",
+    "default_popup": "index.html"
+    },
+    "permissions": ["storage", "identity", "tabs", "https://login.microsoftonline.com/common/discovery/v2.0/keys"],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "web_accessible_resources": [
+    "assets/css/*",
+    "assets/js/*",
+    "assets/fonts/*"
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+      }
+   }
